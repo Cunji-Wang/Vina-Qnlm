@@ -1,0 +1,32 @@
+[4813399 ## mn176: 8238 ## 2023-01-06/15:57:51] after query job cnodelist from db, use-time 1.41 secs.
+[4813399 ## mn176: 8238 ## 2023-01-06/15:57:51] cnodenum= 1, job-resource-list: 22565[mpemap:0x7][spemap:0x000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[4813399 ## mn176: 8238 ## 2023-01-06/15:57:51] control node is: mn176.
+[4813399 ## mn176: 8238 ## 2023-01-06/15:57:51] sub control node number is 1, list: mn134.
+[4813399 ## mn176: 8238 ## 2023-01-06/15:57:53] after gather all tasks. use-time: 0.48 secs.
+[4813399 ## mn176: 8238 ## 2023-01-06/15:57:53] after put tasks info to db, use-time 0.24 secs.
+[4813399 ## mn176: 8238 ## 2023-01-06/15:57:53] start job ok, cnodenum=1, total use-time=2.99 secs!
+[4813399 ## vn022565: 17859 ## 2023-01-06/15:57:55] job's first task will run: /usr/bin/swrun -b 1 -K 4096 -s 11000 -c 128 -j 4813399 -F 0xFFFFFFFFFFFFFFFF -i ./vina_reserve --manageNum 1 
+readLigand time:0.00s | sendLigand time:0.00s
+Rank 1 readReceptor time:0.01s | sendReceptor time:0.02s
+working , please waiting...
+save name :  1r4l_rec.pdbqt&&&&ZINC39693267.pdbqt
+
+Parse bundle time : 0.91 seconds
+Search time : 24.81 seconds
+finished process:100%
+done
+
+
+..........................................
+   总共对接次数（Number of docking）      = 1 
+   总共运行时间（Total time required）    = 27.98 seconds.
+..........................................
+
+   总共计算核数（Total number caculate cores) = 1.
+   总的核心计算时间（Total caculate time) = 27.91 seconds.
+   平均单核计算时间（Average caculate time) = 27.91 seconds.
+   单主核最长计算时间（Max time core）    = 27.91 seconds.
+..........................................
+
+...........FINISHED BY VINA@QNLM..........
+[4813399 ## mn176: 8238 ## 2023-01-06/15:58:42] job_finished. use-time: 48.732315 (secs)

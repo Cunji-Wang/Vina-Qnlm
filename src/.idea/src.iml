@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/lib/model.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/terms.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/tee.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/manifold.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/conf.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/quaternion.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/random.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/atom.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/array3d.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/parallel_progress.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/quasi_newton.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/grid_dim.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/manifold.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/tree.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/current_weights.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/my_pid.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/pdb.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/file.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/triangular_matrix_index.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/parse_pdbqt.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/my_pid.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/ssd.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/model.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/atom_constants.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/macros.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/cache.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/everything.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/non_cache.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/monte_carlo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/mutate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/terms.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/szv_grid.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/szv_grid.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/parse_pdbqt.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/random.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/convert_substring.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/quasi_newton.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/atom_type.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/mutate.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/grid.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/igrid.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/parallel_progress.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/quaternion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/coords.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/pdb.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/naive_non_cache.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/everything.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/brick.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/common.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/naive_non_cache.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/matrix.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/non_cache.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/incrementable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/scoring_function.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/precalculate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/bfgs.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/current_weights.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/recent_history.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/atom_base.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/int_pow.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/weighted_terms.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/monte_carlo.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/parallel.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/statistics.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/parallel_mc.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/parallel_mc.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/grid.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/weighted_terms.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/parse_error.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/ssd.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/curl.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/coords.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/cache.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/split/split.cpp" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES>
+          <root url="file:///usr/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/6/include" />
+          <root url="file:///usr/local/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file:///usr/include" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/6/include" />
+          <root url="file:///usr/local/include" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

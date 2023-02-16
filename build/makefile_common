@@ -1,0 +1,78 @@
+LIBOBJ = LigandList.o cache.o coords.o current_weights.o everything.o grid.o szv_grid.o manifold.o model.o monte_carlo.o mutate.o my_pid.o naive_non_cache.o non_cache.o parallel_mc.o parse_pdbqt.o pdb.o quasi_newton.o quaternion.o random.o ssd.o terms.o weighted_terms.o 
+MAINOBJ = main.o
+SPLITOBJ = split.o
+SLAVEOBJ = bfgs_slave.o common_slave.o model_slave.o monte_carlo_slave.o mutate_slave.o quaternion_slave.o randomgen.o tree_hetero_cal.o cachegrid.o
+
+#INCFLAGS = -I$(BOOST_INCLUDE) -I$(MPI_INCLUDE) -I$(ATHREAD_INCLUDE)
+INCFLAGS = -I$(BOOST_INCLUDE) -I$(MPI_INCLUDE)
+SLAVEINCFLAGS = -I$(ATHREAD_INCLUDE)
+
+# -pedantic fails on Mac with Boost 1.41 (syntax problems in their headers)
+#CC = ${GPP} ${C_PLATFORM} -ansi -pedantic -Wno-long-long ${C_OPTIONS} $(INCFLAGS)
+#CC = ${GPP} ${C_PLATFORM} -ansi -Wno-long-long ${C_OPTIONS} $(INCFLAGS)
+CC = ${CXX} ${C_PLATFORM} -ansi -Wno-long-long -std=c++11 ${C_OPTIONS} $(INCFLAGS)
+SLAVE_CC = ${SLAVE_C}  $(CC_SLAVE_FLAGS)
+HOST_CC = ${HOST_CXX} ${C_PLATFORM} -ansi -Wno-long-long -std=c++11 ${C_OPTIONS} $(INCFLAGS)
+
+
+#LDFLAGS = -L$(BASE)/lib -L.
+
+#LIBS = -l boost_system${BOOST_LIB_VERSION} -l boost_thread${BOOST_LIB_VERSION} -l boost_serialization${BOOST_LIB_VERSION} -l boost_filesystem${BOOST_LIB_VERSION} -l boost_program_options${BOOST_LIB_VERSION}#-l pthread
+
+#LDFLAGS =  -L/home/export/online1/swjsmbt/gaojh/boost_static # -L. -allshare
+#LDFLAGS = -L/home/export/online1/mdt00/shisuan/swqdsys/yumaoxue/yumaoxue/boost_1_67_0/lib -L/usr/sw/swgcc/swgcc710-tools-9A-966/usr_sw7/lib -L.
+LDFLAGS = -L/home/export/online1/mdt00/shisuan/swyaow/luhao/lh/boost/boost_1_67_0/lib -L.
+#SLAVELDFLAGS = -L/usr/sw/swgcc/swgcc710-tools-9A-966/usr_sw7/lib -L.
+SLAVELDFLAGS = -L.
+#LDFLAGS = -L$(BASE) -L.
+
+LIBS = -lm_slave -lboost_system${BOOST_LIB_VERSION} -lboost_serialization${BOOST_LIB_VERSION} -lboost_filesystem${BOOST_LIB_VERSION} -lboost_program_options${BOOST_LIB_VERSION} -lboost_thread${BOOST_LIB_VERSION} #-l pthread -lstdc++  
+
+BOOST = 
+
+
+#LIBS = -boost_system${BOOST_LIB_VERSION} -boost_thread-mt${BOOST_LIB_VERSION} -boost_serialization${BOOST_LIB_VERSION} -boost_filesystem${BOOST_LIB_VERSION} -boost_program_options${BOOST_LIB_VERSION} #-lpthread -lstdc++
+#LIBS = -lboost_system${BOOST_LIB_VERSION} -lboost_serialization${BOOST_LIB_VERSION} -lboost_filesystem${BOOST_LIB_VERSION} -lboost_program_options${BOOST_LIB_VERSION} -lboost_thread${BOOST_LIB_VERSION} #-lpthread -lstdc++ 
+
+
+
+
+
+
+.SUFFIXES: .cpp .c .o
+
+%.o : ../../../src/lib/%.cpp 
+	$(HOST_CC) $(CFLAGS) $(LDFLAGS) -o $@ -c $< 
+
+%.o : ../../../src/lib/%.c 
+	$(SLAVE_CC) $(SLAVELDFLAGS) -o $@ -c $< 
+
+%.o : ../../../src/design/%.cpp 
+	$(HOST_CC) $(CFLAGS) -I../../../src/lib -o $@ -c $<
+ 
+%.o : ../../../src/main/%.cpp 
+	$(HOST_CC) $(CFLAGS) $(LDFLAGS) -I../../../src/lib -o $@ -c $<
+ 
+%.o : ../../../src/split/%.cpp 
+	$(HOST_CC) $(CFLAGS) $(LDFLAGS)  -I../../../src/lib -o $@ -c $< 
+
+all: vina_reserve vina_split
+
+include dependencies
+
+vina_reserve: $(MAINOBJ) $(LIBOBJ) $(SLAVEOBJ)
+	$(CC) $(C_HYBRID_FLAGS) $(LDFLAGS)  -o $@ $^ $(LIBS)
+
+vina_split: $(SPLITOBJ)
+	$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+
+clean:
+	rm -f *.o vina_reserve vina_split
+
+depend:
+	ln -sf `${GPP} -print-file-name=libstdc++.a`
+	rm -f dependencies_tmp dependencies_tmp.bak
+	touch dependencies_tmp
+	makedepend -f dependencies_tmp -Y -I ../../../src/lib ../../../src/lib/*.cpp ../../../src/tests/*.cpp ../../../src/design/*.cpp ../../../src/main/*.cpp ../../../src/split/*.cpp  ../../../src/tune/*.cpp
+	sed -e "s/^\.\.\/\.\.\/\.\.\/src\/[a-z]*\//.\//" dependencies_tmp > dependencies
+	rm -f dependencies_tmp dependencies_tmp.bak
