@@ -1,5 +1,5 @@
 # Vina@Qnlm
-# ===========================================
+# =====================================
 
 # About
 
@@ -31,4 +31,6 @@ vim bsub.sh
 
 bash bsub.sh
 
+# Node
 
+Our team focuses on the research work in the direction of drug virtual computing, welcome to communicate and cooperate together.
