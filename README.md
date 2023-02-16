@@ -1,4 +1,4 @@
-# Vina-Qnlm
+# Vina@Qnlm
 Vina@Qnlm is a very efficient, accurate and convenient parallel version of molecular docking software.
 
 Vina@qnlm is an improved ultra-massive parallel virtual screening method based on AutoDock Vina on the Shenwei TaihuLight domestic supercomputer system. 
